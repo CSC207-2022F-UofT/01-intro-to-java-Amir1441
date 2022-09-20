@@ -71,6 +71,7 @@ public class BasicsTest {
     @Test(timeout = 50)
     public void testTask5() {
         int[] arr = {5, 3, 1};
+        System.out.println(Basics.oddSum(arr));
         assertEquals(Basics.oddSum(arr), 3);
 
         int[] arr2 = {1, 10, 2, 15, 3, 12};

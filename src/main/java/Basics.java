@@ -43,6 +43,7 @@ public class Basics {
         /* TODO (Task 1): Write a line of code below that prints the string
          *                Hello World!
          */
+        System.out.println("Hello World!");
 
 
 
@@ -61,7 +62,9 @@ public class Basics {
         /*
          * TODO (Task 2): Create a variable named my_variable and assign it the
          *                value 100.
+         *
          */
+        int my_variable = 100;
 
 
 
@@ -100,6 +103,10 @@ public class Basics {
          * Current count: 0
          */
 
+            for (int i = 10; i >= 0; i--){
+                System.out.println("Current count: " + i);
+        }
+
 
     }
 
@@ -115,7 +122,7 @@ public class Basics {
      *    about what is returned.
      *
      * Create a String named 'ret' and get the first letter of
-     * each word inside to_string. to_string is a String containing exactly
+     * each word inside to_split. to_string is a String containing exactly
      * 7 words, separated by spaces.
      *
      * You may want to use String.split() and String.charAt() methods.
@@ -141,8 +148,10 @@ public class Basics {
          *                you may use them if you wish.
          */
         StringBuilder ret = new StringBuilder();
-
-        // Fill in the rest of the body here
+        String [] arr = to_split.split(" ");
+        for (String s: arr) {
+            ret.append(s.charAt(0));
+        }
 
         return ret.toString();
     }
@@ -163,16 +172,20 @@ public class Basics {
      */
     public static int oddSum(int[] arr) {
         int current_sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (i%2 != 0) {
+                //System.out.println(i);
+                current_sum += arr[i];
+                }
 
-        /* TODO (Task 5): Complete this method body using a for-loop.
-         *                You can find the length of an array by using the
-         *                .length attribute (e.g. arr.length)
-         *                You can index into arrays as we do in Python
-         *                (e.g. arr[i] gives you the item at index i).
-         */
+        }
 
         return current_sum;
+
     }
+
+
+
 
 
     /*
